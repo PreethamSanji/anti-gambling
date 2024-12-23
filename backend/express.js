@@ -8,7 +8,7 @@ const { User, Account } = require("./db");
 const { userValidationSignUp, userValidationLogin } = require("./auth");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const JWT_SECRET = "your_jwt_secret";
 
 app.use(cors());
