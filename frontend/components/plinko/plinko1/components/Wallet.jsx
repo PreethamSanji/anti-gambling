@@ -11,7 +11,7 @@ const Wallet = () => {
       try {
         // Replace with your actual API to get the wallet balance.
         const token = localStorage.getItem("token"); // Assuming token is stored in localStorage after login
-        const response = await axios.get("http://localhost:3000/wallet", {
+        const response = await axios.get("https://anti-gambling-backend.onrender.com/wallet", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

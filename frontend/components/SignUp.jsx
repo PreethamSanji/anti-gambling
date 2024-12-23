@@ -139,7 +139,7 @@ const SignupPage = () => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post("http://localhost:3000/signup", formData);
+      const response = await axios.post("https://anti-gambling-backend.onrender.com/signup", formData);
       console.log("Signup successful:", response.data);
       navigate("/disclaimer");
     } catch (error) {

@@ -18,7 +18,7 @@ const Wallet = () => {
       }
 
       try {
-        const response = await axios.get("http://localhost:3000/wallet", {
+        const response = await axios.get("https://anti-gambling-backend.onrender.com/wallet", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setBalance(response.data.balance || 0);

@@ -130,7 +130,7 @@ const LoginPage = () => {
 
   const fetchWalletBalance = async (token) => {
     try {
-      const response = await axios.get("http://localhost:3000/wallet", {
+      const response = await axios.get("https://anti-gambling-backend.onrender.com/wallet", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -146,7 +146,7 @@ const LoginPage = () => {
   e.preventDefault();
   setIsLoading(true);
   try {
-    const response = await axios.post("http://localhost:3000/login", formData);
+    const response = await axios.post("https://anti-gambling-backend.onrender.com/login", formData);
     const token = response.data.token;
 
     // Store the token in localStorage with the correct key 'authToken'

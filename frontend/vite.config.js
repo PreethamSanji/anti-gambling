@@ -7,7 +7,7 @@ export default defineConfig({
     hmr: false,
     proxy: {
       "/wallet": {
-        target: "http://localhost:3000",
+        target: "https://anti-gambling-backend.onrender.com",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/wallet/, "/wallet"),
       },

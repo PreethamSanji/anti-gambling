@@ -27,7 +27,7 @@ const Crash = () => {
       }
 
       try {
-        const response = await axios.get("http://localhost:3000/wallet", {
+        const response = await axios.get("https://anti-gambling-backend.onrender.com/wallet", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -48,7 +48,7 @@ const Crash = () => {
 
     try {
       await axios.post(
-        "http://localhost:3000/wallet/update",
+        "https://anti-gambling-backend.onrender.com/wallet/update",
         {
           balance: newBalance,
           gameResult,

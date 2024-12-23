@@ -5,7 +5,7 @@ import '@fontsource/quicksand'
 import '@fontsource/comfortaa'
 import { useNavigate } from "react-router-dom";
 
-const baseURL = "http://localhost:3000";
+const baseURL = "https://anti-gambling-backend.onrender.com";
 
 const Plinko = () => {
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ const Plinko = () => {
       }
 
       try {
-        const response = await axios.get("http://localhost:3000/wallet", {
+        const response = await axios.get("https://anti-gambling-backend.onrender.com/wallet", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -62,7 +62,7 @@ const Plinko = () => {
 
     try {
       await axios.post(
-        "http://localhost:3000/wallet/update",
+        "https://anti-gambling-backend.onrender.com/wallet/update",
         {
           balance: newBalance,
           gameResult,
@@ -128,7 +128,7 @@ const Plinko = () => {
       console.error("Error in game:", error)
       setError("Error occurred during game play.")
       // Restore the original balance if there's an error
-      const response = await axios.get("http://localhost:3000/wallet", {
+      const response = await axios.get("https://anti-gambling-backend.onrender.com/wallet", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },
