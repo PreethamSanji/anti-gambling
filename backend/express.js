@@ -13,7 +13,7 @@ const JWT_SECRET = "your_jwt_secret";
 
 app.use(cors({
   origin: "https://anti-gambling-frontend.onrender.com",
-  credentials=  true,
+  credentials:  true,
 }));
 app.use(bodyParser.json());
 
