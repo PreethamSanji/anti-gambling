@@ -278,7 +278,7 @@ app.post("/wallet/withdraw", async (req, res) => {
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://anti-gambling-frontend.onrender.com",
     credentials: true,
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
