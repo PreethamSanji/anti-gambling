@@ -8,10 +8,13 @@ const { User, Account } = require("./db");
 const { userValidationSignUp, userValidationLogin } = require("./auth");
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port =  || 3000;
 const JWT_SECRET = "your_jwt_secret";
 
-app.use(cors());
+app.use(cors({
+  origin: "https://anti-gambling-frontend.onrender.com",
+  credentials=  true,
+}));
 app.use(bodyParser.json());
 
 const buildPath =
